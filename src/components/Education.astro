@@ -1,21 +1,19 @@
 ---
 import EducationCard from "./EducationCard.astro";
 import Section from "./Section.astro";
-
 ---
+
 <Section title="Education">
-    <div class="flex flex-col gap-4">
-        <EducationCard 
-            topLeft="Northeastern University" 
-            topRight="First semester (on-going)" 
-            bottomLeft="Master of Science in Computer Science"
-            bottomRight="Sept 23 - Dec 25"
-        />
-        <EducationCard 
-            topLeft="University of Mumbai" 
-            topRight="9.08 / 10.00" 
-            bottomLeft="Bachelor of Engineering in Information Technology"
-            bottomRight="Jun 18 - Jul 22"
-        />
-    </div>
+  <EducationCard
+    topLeft="Northeastern University"
+    topRight="First semester"
+    bottomLeft="Master of Science in Computer Science"
+    bottomRight="Sept 23 - Dec 25"
+  />
+  <EducationCard
+    topLeft="University of Mumbai"
+    topRight="9.08 / 10.00"
+    bottomLeft="Bachelor of Engineering in Information Technology"
+    bottomRight="Jun 18 - Jul 22"
+  />
 </Section>
