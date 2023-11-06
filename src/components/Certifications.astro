@@ -1,0 +1,93 @@
+---
+import Section from "./Section.astro";
+
+const data: { name: string; link: string; by?: string; points: string[] }[] = [
+  {
+    name: "AWS Certified Solutions Architect – Associate",
+    link: "https://www.credly.com/badges/bcac84e6-f2cb-4643-9bf2-c6ea4b82413a",
+    points: [
+      "Compute, networking, storage, and database AWS services as well as AWS deployment and management services",
+      "Deploying, managing, and operating workloads on AWS as well as implementing security controls and compliance requirements",
+      "Using the AWS Management Console and the AWS Command Line Interface (CLI). Understanding of the AWS Well-Architected Framework, AWS networking, security services, and the AWS global infrastructure",
+      "Ability to identify which AWS services meet a given technical requirement and to define technical requirements for an AWS-based application",
+    ],
+  },
+  {
+    name: "Machine Learning Specialisation",
+    link: "https://www.coursera.org/account/accomplishments/specialization/PT3J997GPTWQ",
+    by: "Stanford University",
+    points: [
+      "Supervised Machine Learning: Regression and Classification",
+      "Advanced Learning Algorithms",
+      "Unsupervised Learning, Recommenders, Reinforcement Learning",
+    ],
+  },
+  {
+    name: "Algorithms Specialisation",
+    by: "Stanford Online",
+    link: "https://www.coursera.org/account/accomplishments/specialization/LE5D4NRGX35L",
+    points: [
+      "Divide and Conquer, Sorting and Searching, and Randomized Algorithms",
+      "Graph Search, Shortest Paths, and Data Structures",
+      "Greedy Algorithms, Minimum Spanning Trees, and Dynamic Programming",
+      "Shortest Paths Revisited, NP-Complete Problems and What To Do About Them",
+    ],
+  },
+  {
+    name: "Deep Learning Specialisation",
+    by: "DeepLearning.AI",
+    link: "https://www.coursera.org/account/accomplishments/specialization/D44S4FV35832",
+    points: [
+      "Neural Networks and Deep Learning",
+      "Improving Deep Neural Networks: Hyperparameter Tuning, Regularization and Optimization",
+      "Structuring Machine Learning Projects",
+      "Convolutional Neural Networks",
+      "Sequence Models",
+    ],
+  },
+  {
+    name: "Tensorflow Developer Specialisation",
+    by: "DeepLearning.AI",
+    link: "https://www.coursera.org/account/accomplishments/professional-cert/5KYWXRUYEE34",
+    points: [
+      "Introduction to TensorFlow for Artificial Intelligence, Machine Learning, and Deep Learning",
+      "Convolutional Neural Networks in TensorFlow",
+      "Natural Language Processing in TensorFlow",
+      "Sequences, Time Series and Prediction",
+    ],
+  },
+  {
+    name: "Tensorflow: Data and Deployment Specialisation",
+    by: "DeepLearning.AI",
+    link: "https://www.coursera.org/account/accomplishments/specialization/KJZH4MAZ29EU",
+    points: [
+      "Browser-based Models with TensorFlow.js",
+      "Device-based Models with TensorFlow Lite",
+      "Data Pipelines with TensorFlow Data Services",
+      "Advanced Deployment Scenarios with TensorFlow",
+    ],
+  },
+];
+---
+
+<Section title="Certifications">
+  {
+    data.map((d) => (
+      <div class="flex flex-col gap-2">
+        <div class="flex flex-wrap gap-1 justify-between">
+          <h3 class="text-lg font-bold">
+            <a class="text-blue-600" href={d.link} target="_blank">
+              {d.name}
+            </a>
+          </h3>
+          {d.by ? <span class="italic">by {d.by}</span> : null}
+        </div>
+        <ul class="ml-5 list-disc flex flex-col gap-1">
+          {d.points.map((p) => (
+            <li>{p}</li>
+          ))}
+        </ul>
+      </div>
+    ))
+  }
+</Section>
