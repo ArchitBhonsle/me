@@ -1,14 +1,15 @@
 ---
+import Link from "./Link.astro";
 import Section from "./Section.astro";
 ---
 
 <Section title="Research">
   <div class="flex flex-col gap-2">
-    <h3 class="text-lg font-bold text-blue-600">
-      <a href="https://ieeexplore.ieee.org/document/10039665" target="_blank">
-        Generating Datasets with Glyph-level Annotations for Devanagari Text
-        Recognition
-      </a>
+    <h3 class="text-lg font-bold">
+      <Link
+        link="https://ieeexplore.ieee.org/document/10039665"
+        display="Generating Datasets with Glyph-level Annotations for Devanagari Text Recognition"
+      />
     </h3>
     <ul class="ml-5 list-disc flex flex-col gap-1">
       <li>
@@ -32,48 +33,46 @@ import Section from "./Section.astro";
         synthetic text recognition datasets with rich glyph- level annotations.
       </li>
       <li>
-        Presented at <a
-          class="text-blue-600"
-          href="https://ieeexplore.ieee.org/xpl/conhome/10038979/proceeding"
-          target="_blank"
-          >2022 5th International Conference on Advances in Science and
-          Technology (ICAST)</a
-        > published on IEEE Xplore.
+        Presented at <Link
+          link="https://ieeexplore.ieee.org/xpl/conhome/10038979/proceeding"
+          display="2022 5th International Conference on Advances in Science and Technology (ICAST)"
+        />
+         , published on IEEE Xplore.
       </li>
     </ul>
-  </div>
-  <div class="flex flex-col gap-2">
-    <h3 class="text-lg font-bold text-blue-600">
-      <a href="https://ieeexplore.ieee.org/document/9725939" target="_blank">
-        Linear Algebra in the Browser powered by WebAssembly
-      </a>
-    </h3>
-    <ul class="ml-5 list-disc flex flex-col gap-1">
-      <li>
-        With over 4 billion worldwide active users, the web is the most prolific
-        platform for people to interact with computers. Developers utilize
-        JavaScript to create dynamic user interfaces that power the web as we
-        know it.
-      </li>
-      <li>
-        Although there have been changes to JavaScript or how JavaScript is
-        “interpreted” by the browser, the performance still doesn’t match
-        compiled native code.
-      </li>
-      <li>
-        This paper aims to focus on, WebAssembly, one of the mechanisms to
-        overcome this limitation and write a linear algebra library that will
-        empower developers in creating user experiences that go beyond the
-        traditional web.
-      </li>
-      <li>
-        Presented at <a
-          class="text-blue-600"
-          href="https://ieeexplore.ieee.org/xpl/conhome/9725432/proceeding"
-          target="_blank"
-          >2022 International Conference for Advancement in Technology (ICONAT)</a
-        > published on IEEE Xplore.
-      </li>
-    </ul>
+    <div class="flex flex-col gap-2">
+      <h3 class="text-lg font-bold">
+        <Link
+          link="https://ieeexplore.ieee.org/document/9725939"
+          display="Linear Algebra in the Browser powered by WebAssembly"
+        />
+      </h3>
+      <ul class="ml-5 list-disc flex flex-col gap-1">
+        <li>
+          With over 4 billion worldwide active users, the web is the most
+          prolific platform for people to interact with computers. Developers
+          utilize JavaScript to create dynamic user interfaces that power the
+          web as we know it.
+        </li>
+        <li>
+          Although there have been changes to JavaScript or how JavaScript is
+          “interpreted” by the browser, the performance still doesn’t match
+          compiled native code.
+        </li>
+        <li>
+          This paper aims to focus on, WebAssembly, one of the mechanisms to
+          overcome this limitation and write a linear algebra library that will
+          empower developers in creating user experiences that go beyond the
+          traditional web.
+        </li>
+        <li>
+          Presented at <Link
+            link="https://ieeexplore.ieee.org/xpl/conhome/9725432/proceeding"
+            display="2022 International Conference for Advancement in Technology (ICONAT)"
+          />
+           , published on IEEE Xplore.
+        </li>
+      </ul>
+    </div>
   </div>
 </Section>

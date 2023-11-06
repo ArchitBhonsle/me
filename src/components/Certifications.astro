@@ -1,4 +1,5 @@
 ---
+import Link from "./Link.astro";
 import Section from "./Section.astro";
 
 const data: { name: string; link: string; by?: string; points: string[] }[] = [
@@ -76,9 +77,7 @@ const data: { name: string; link: string; by?: string; points: string[] }[] = [
       <div class="flex flex-col gap-2">
         <div class="flex flex-wrap gap-1 justify-between">
           <h3 class="text-lg font-bold">
-            <a class="text-blue-600" href={d.link} target="_blank">
-              {d.name}
-            </a>
+            <Link link={d.link} display={d.name} />
           </h3>
           {d.by ? <span class="italic">by {d.by}</span> : null}
         </div>
