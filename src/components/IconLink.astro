@@ -1,0 +1,13 @@
+---
+import Icon from "astro-icon";
+
+const { link, iconName } = Astro.props;
+---
+
+<a
+  class="aspect-square h-8 hover:-translate-y-1 duration-200 ease-out"
+  href={link}
+  target="_blank"
+>
+  <Icon name={iconName} />
+</a>

@@ -1,0 +1,27 @@
+---
+import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
+
+const { title } = Astro.props;
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <GoogleFontsOptimizer
+      url={[
+        "https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap",
+        "https://fonts.googleapis.com/css2?family=Inter&display=swap",
+      ]}
+    />
+
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="mx-4 mt-5 sm:mx-auto w-auto sm:w-5/6 md:4/6 lg:w-3/6">
+      <slot />
+    </div>
+  </body>
+</html>
