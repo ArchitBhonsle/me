@@ -52,10 +52,10 @@ const data: { name: string; link: string; desc: string }[] = [
 ---
 
 <Section title="Projects">
-  <div class="flex flex-col gap-2">
+  <div class="flex flex-col gap-4">
     {
       data.map((d) => (
-        <div class="flex flex-col gap-1">
+        <div class="flex flex-col gap-2">
           <h3 class="font-bold inline-block text-lg">
             <Link link={d.link} display={d.name} />
           </h3>
