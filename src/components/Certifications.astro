@@ -79,7 +79,7 @@ const data: { name: string; link: string; by?: string; points: string[] }[] = [
           <h3 class="text-lg font-bold">
             <Link link={d.link} display={d.name} />
           </h3>
-          {d.by ? <span class="italic">by {d.by}</span> : null}
+          {d.by ? <span class="italic text-sm">by {d.by}</span> : null}
         </div>
         <ul class="ml-5 list-disc flex flex-col gap-1">
           {d.points.map((p) => (

@@ -3,14 +3,10 @@ import Icon from "astro-icon";
 const { link, display } = Astro.props;
 ---
 
-<a
-  class="underline inline-block hover:-translate-y-0.5 duration-200 ease-out"
-  href={link}
-  target="_blank"
->
+<a class="underline" href={link} target="_blank">
   {display}
   <Icon
-    class="inline aspect-square w-4 ml-0.5 mb-0.5"
+    class="inline aspect-square w-4 mx-0.5 mb-0.5"
     name="mdi:link-variant"
   />
 </a>

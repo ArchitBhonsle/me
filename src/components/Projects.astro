@@ -1,0 +1,67 @@
+---
+import Link from "./Link.astro";
+import Section from "./Section.astro";
+
+const data: { name: string; link: string; desc: string }[] = [
+  {
+    name: "Lipi",
+    link: "https://github.com/ArchitBhonsle/lipi",
+    desc: "A synthetic dataset generator for Devanagari text recognition written in Python using Harfbuzz.",
+  },
+  {
+    name: "arrays.wasm",
+    link: "https://github.com/ArchitBhonsle/arrays.wasm",
+    desc: "A blazing fast array manipulation library for the web written in Rust and compiled to WebAssembly.",
+  },
+  {
+    name: "Event Management Website",
+    link: "https://github.com/ArchitBhonsle/event-management-admin",
+    desc: "An admin dashboard website for our college festival providing a beautiful yet minimal interface to manage users, events and payments. Created using React, NextJS and ChakraUI for the front-end and Node, Express and MongoDB for the backend.",
+  },
+  {
+    name: "MNIST Explorer",
+    link: "https://github.com/ArchitBhonsle/mnist-explorer",
+    desc: "A web app made using React and TensorflowJS to demonstrate the results of using different models and tweaking hyper-parameters in machine learning using the MNIST dataset.",
+  },
+  {
+    name: "Smart Pulse-Oximeter",
+    link: "https://github.com/ArchitBhonsle/smart-pulseox",
+    desc: "An Arduino powered smart pulse-oximeter that sends the captured data to a phone application created using Flutter which relays the annotated data to a server powered by NodeJS, Express and MongoDB.",
+  },
+  {
+    name: "Competitive Programming Bot",
+    link: "https://github.com/ArchitBhonsle/cp-bot",
+    desc: "A CLI (command-line interface) tool to simplify the process of participating in competitive programming contests using web scraping written in Golang.",
+  },
+  {
+    name: "Conway’s Game of Life in WebAssembly",
+    link: "https://github.com/ArchitBhonsle/cgol-wasm",
+    desc: "A Conway’s Game of Life implementation in the browser powered by WebAssembly written in Rust. Deployed here.",
+  },
+  {
+    name: "PyChess",
+    link: "https://github.com/ArchitBhonsle/cgol-wasm",
+    desc: "A chess game written in Python with single-player mode against the computer using stockfish and over-the-board two-player mode.",
+  },
+  {
+    name: "E-Commerce Website",
+    link: "https://github.com/ArchitBhonsle/e-commerce-react",
+    desc: "An e-commerce website using React, Redux, Styled Components and Firebase.",
+  },
+];
+---
+
+<Section title="Projects">
+  <div class="flex flex-col gap-2">
+    {
+      data.map((d) => (
+        <div class="flex flex-col gap-1">
+          <h3 class="font-bold inline-block text-lg">
+            <Link link={d.link} display={d.name} />
+          </h3>
+          <div>{d.desc}</div>
+        </div>
+      ))
+    }
+  </div>
+</Section>
